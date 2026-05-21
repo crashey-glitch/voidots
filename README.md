@@ -16,8 +16,17 @@ Created three partitions
 |/|ext4|450 GB|
 
 ## Style
-Created the Cruxified theme, based on Cruxish default theme but with added borders: white for active window, red for others.
-I also removed every panel, only left a topbar for now.
+I removed every panel, only left a topbar for now.
+Created the Cruxified theme, based on Cruxish default theme
+```bat
+cp -r /usr/share/themes/Cruxish ~/.themes/Cruxified
+```
+Edited themerc to add colors to borders: white for active window, red for others.
+```bat
+active_border_color=#AAAAAA
+inactive_border_color=#FF0000
+```
+Since the border was too thin, I also added 4 more lines to the xpm files starting with "bottom", adding 4 to the number of columns (second in the numbers vector of each file)
 
 Colorscheme: [Squared](https://www.xfce-look.org/p/2206255)
 
@@ -60,7 +69,7 @@ sudo xbps-install -S void-repo-nonfree
 
 ## Extra software
 Installed with script provided on the main webpage
-- [VeraCrypt](veracrypt.io)
+- [VeraCrypt](https://veracrypt.io)
 - Discord
 
 ## Gaming and Nvidia graphics
@@ -116,25 +125,26 @@ chmod +x lux.bash
 echo "/home/trogoz/scripts/lux.bash" >> /etc/rc.local
 ```
 
-###key remaps
-siamo su X11 quindi usiamo xev e xbindkeys con xdotool per cambiare workspace
-sudo xbps-install xev xbindkeys xdotool
+## key remaps
+Installed the X11 packages to interact with keybinds:
+```bat
+sudo xbps-install xev xbindkeys 
+```
+With xev it is possible to retrieve the button names, for example my mouse buttons are 8 and 9.
+Then I generated the base config for xbindkeys
+```bat
 xbindkeys --defaults > ~/.xbindkeysrc
-killall xbindkeys; xbindkeys
+```
+And edited the file to add the workspace switching functionality I needed. To do that the needed package is:
+```bat
+sudo xbps-install xdotool
+```
+The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
 
 
-###tema cruxified
-sono partito da un tema esistente, rinominandolo:
-cp -r /usr/share/themes/Cruxish ~/.themes/Cruxified
-ho modificato il themerc aggiungendo dei colori ai bordi:
-active_border_color=#AAAAAA
-inactive_border_color=#FF0000
-siccome lo spessore non mi soddisfaceva, ho aggiunto altre 4 righe al bordo inferiore 
-nei files xpm che iniziano con "bottom", e sommato 4 al numero di colonne (seondo numero nel vettore alle prime righe)
-
-###idee
-scorciatoie da tastiera per il volume
-aggiungere un orologio in overlay e magari anche cambio workspace in overlay?
-salvare dei dotfiles con font, tema gtk e tema window decorator
+## To do
+- Volume keystrokes
+- overlay clock and overlay workspace name?
+- save dotfiles, fonts, themes (DONE)
 
 
