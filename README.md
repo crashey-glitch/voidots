@@ -114,6 +114,7 @@ sudo xbps-install blueman
 ```
 
 ## Omen lights
+Installed [Omen-light](https://github.com/chiahsing/omen-light)
 ```bat
 sudo xbps-install hidapi-devel
 git clone https://github.com/chiahsing/omen-light
