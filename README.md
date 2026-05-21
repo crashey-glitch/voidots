@@ -90,6 +90,7 @@ Uncommented the lines:
 - GRUB_GFXMODE=800x600x32
 - GRUB_COLOR_NORMAL="light-blue/black"
 - GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+
 Then applied with:
 ```bat
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -118,8 +119,7 @@ sudo xbps-install hidapi-devel
 git clone https://github.com/chiahsing/omen-light
 g++ -o omen_light omen_light.cc -lhidapi-libusb
 ```
-I created a script [lux.bash](scripts/lux.bash)
-added run permissions and made it autorun:
+I created [lux.bash](scripts/lux.bash), added run permissions and made it autorun:
 ```bat
 chmod +x lux.bash
 echo "/home/trogoz/scripts/lux.bash" >> /etc/rc.local
@@ -140,7 +140,6 @@ And edited the file to add the workspace switching functionality I needed. To do
 sudo xbps-install xdotool
 ```
 The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
-
 
 ## To do
 - Volume keystrokes
