@@ -1,0 +1,72 @@
+conky.config = {
+--==============================================================================
+
+-- 	Initiating RASTABAN system... 🚀
+-- 	Draco constellation activated, the dragon awakens. 🐉
+-- 	Ride the dragon’s flight across the cosmic lattice.
+--
+--  created : 2022/May/12
+--  author  : Closebox73
+--  version : 3.0
+--  variant : Celcius
+--  license : Distributed under the terms of GPLv3
+--
+--  This theme is for conky version 1.10.8 or newer
+
+--==============================================================================
+
+-- Size and Position settings --
+  alignment = 'top_left',
+  gap_x = 20,
+  gap_y = 60,
+  maximum_width = 250,
+  minimum_height = 80,
+  minimum_width = 250,
+  
+-- Text settings --
+  use_xft = true,
+  override_utf8_locale = true,
+  font = 'Roboto:size=2',
+  
+-- Color Settings --
+  default_color = 'white',
+  default_outline_color = 'white',
+  default_shade_color = 'white',
+  color1 = 'D36730',
+  color2 = 'DBB694',
+  
+-- Window Settings --
+  background = false,
+  border_width = 1,
+  draw_borders = true,
+  draw_graph_borders = true,
+  draw_outline = false,
+  draw_shades = false,
+  own_window = true,
+  own_window_colour = '000000',
+  own_window_class = 'Conky',
+  own_window_argb_visual = false,
+  own_window_type = 'desktop',
+  own_window_transparent = true,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  stippled_borders = 0,
+  
+-- Others --
+  cpu_avg_samples = 2,
+  net_avg_samples = 2,
+  double_buffer = true,
+  out_to_console = false,
+  out_to_stderr = false,
+  extra_newline = false,
+  update_interval = 1,
+  uppercase = false,
+  use_spacer = 'none',
+  short_units = true,
+  show_graph_scale = false,
+  show_graph_range = false,
+}
+
+conky.text = [[
+${alignc}${font Bebas Neue:size=60}${time %H:%M}${font}
+${alignc}${voffset 5}${color1}${font PT Sans:size=13}${time %A, %d %B}${font}
+]]
