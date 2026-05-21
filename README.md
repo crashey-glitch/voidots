@@ -16,9 +16,10 @@ Created three partitions
 |/|ext4|450 GB|
 
 ## Style
-Created the Cruxified theme, based on Cruxish default theme but with added borders
-White border for active window, red for others
-I also removed every panel, only left a topbar for now
+Created the Cruxified theme, based on Cruxish default theme but with added borders: white for active window, red for others.
+I also removed every panel, only left a topbar for now.
+
+Colorscheme: [Squared](https://www.xfce-look.org/p/2206255)
 
 ## Keys
 - super+w: close window
@@ -27,7 +28,9 @@ I also removed every panel, only left a topbar for now
 - super+g: thunar
 - ctrl+alt+left/right: change workspace
 - ctrl+alt+shift+left/right: move window to workspace
-- alt+leftclick: 
+- alt+leftclick: move window
+- alt-rightclick: resize window
+- alt+keypad numbers: tile window to screen zones
 
 ## package manager
 Query the remote packages list with:
@@ -43,20 +46,24 @@ Add repo:
 sudo xbps-install -S void-repo-nonfree
 ```
 
-## Packages
+## Packages: utility
 - keepassxc
 - xfce4-screenshooter
 - libreoffice
 - engrampa
-- dunelegacy
 - octoxbps
+
+## Packages: games
+- dunelegacy
+- prismlauncher
+- openjdk25
 
 ## Extra software
 Installed with script provided on the main webpage
-- veracrypt
-- discord
+- [VeraCrypt](veracrypt.io)
+- Discord
 
-## Gaming
+## Gaming and Nvidia graphics
 ```bat
 sudo xbps-install -S nvidia nvidia-libs
 sudo xbps-install steam
@@ -66,30 +73,48 @@ sudo xbps-install nvidia-libs-32bit
 ```
 
 ## Grub
+```bat
 sudo mousepad /etc/default/grub
--attivata splashscreen e gfx resolution decommentando roba
+```
+Uncommented the lines:
+- GRUB_BACKGROUND=/usr/share/void-artwork/splash.png
+- GRUB_GFXMODE=800x600x32
+- GRUB_COLOR_NORMAL="light-blue/black"
+- GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+Then applied with:
+```bat
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
 
-###BT
+## Bluetooth
+Installed base packages with:
+```bat
 sudo xbps-install libspa-bluetooth
 sudo xbps-install bluez
+```
+Registered the service and started it and added user to group with:
+```bat
 sudo ln -s /etc/sv/bluetoothd /var/service
+sudo sv up bluetoothd
 sudo usermod -aG bluetooth trogoz
+```
+Then added a GUI manager:
+```bat
 sudo xbps-install blueman
--giocando con blueman-manager e connettendomi piu volte alla fine ha registrato il dispositivo
+```
 
-### omen lights
+## Omen lights
+```bat
 sudo xbps-install hidapi-devel
 git clone https://github.com/chiahsing/omen-light
 g++ -o omen_light omen_light.cc -lhidapi-libusb
-  e cosi compila
-creato:
-#!/bin/bash
-/home/trogoz/scripts/omen-light/omen_light 1 on static 0 0 0
-/home/trogoz/scripts/omen-light/omen_light 4 on static 0 255 0
-/home/trogoz/scripts/omen-light/omen_light 2 on static 0 0 0
-poi chmod +x lux.bash
-e aggiunto lux.bash a /etc/rc.local
+```
+I created a script [lux.bash](scripts/lux.bash)
+added run permissions and made it autorun:
+```bat
+chmod +x lux.bash
+echo "/home/trogoz/scripts/lux.bash" >> /etc/rc.local
+```
 
 ###key remaps
 siamo su X11 quindi usiamo xev e xbindkeys con xdotool per cambiare workspace
