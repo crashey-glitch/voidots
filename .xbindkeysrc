@@ -57,6 +57,20 @@
 "xdotool set_desktop --relative +1"
  b:9
 
+#e il volume
+"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+ XF86AudioLowerVolume
+
+"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+ XF86AudioRaiseVolume
+
+"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+ XF86AudioMute
+
+#muto microfono
+"wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+ XF86AudioMicMute
+
 #"xterm -geom 50x20+20+20"
 #   Shift+Mod2+alt + s
 #
