@@ -1,6 +1,11 @@
 # Voidots
 My notes on void linux installation and personalisation
 
+## Table of contents
+- [Installation](#-Installation)
+- [Style](#-Style)
+
+
 ## Installation
 Chosen XFCE version with GlibC for maximum compatibility
 In live context, used the following commands to start installation
