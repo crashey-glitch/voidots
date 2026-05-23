@@ -172,8 +172,19 @@ The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
 
 ---
 ## To do
-- Volume keystrokes
-- overlay clock and overlay workspace name?
-- save dotfiles, fonts, themes (DONE)
+- [ ] overlay clock (dclock is cool, TUI clock?)
+- [ ] overlay workspace notifier (partially done)
+- [x] Volume keys
+- [X] Mouse buttons
+- [X] Save dotfiles
+- [ ] arduino nfc reader and URKA
+- [ ] rougue galaxy in heroic launcher
+- [ ] PS1 color for user vs root
+- [ ] backup system
+- [ ] add recovery in grub
+- [ ] save grub.conf
+- [ ] desktop environment? (tiling?)
+- [ ] AI
+- [ ] VR
 
 
