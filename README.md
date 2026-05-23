@@ -152,7 +152,7 @@ g++ -o omen_light omen_light.cc -lhidapi-libusb
 I created [lux.bash](scripts/lux.bash), added run permissions and made it autorun, adding it to /etc/rc.local
 
 ---
-## key remaps
+## Key remaps
 Installed the X11 packages to interact with keybinds:
 ```bat
 sudo xbps-install xev xbindkeys 
