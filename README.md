@@ -45,9 +45,10 @@ Edited themerc to add colors to borders: white for active window, red for others
 active_border_color=#AAAAAA
 inactive_border_color=#FF0000
 ```
-Since the border was too thin, I also added 4 more lines to the xpm files starting with "bottom", adding 4 to the number of columns (second in the numbers vector of each file)
+Since the border was too thin, I also added 4 more lines to the xpm files starting with "bottom", adding 4 to the number of columns (second in the numbers vector of each file).
 
-Colorscheme: [Squared](https://www.xfce-look.org/p/2206255)
+Gtk3/4 theme: [Squared](https://www.xfce-look.org/p/2206255)
+
 ---
 ## Keys
 - super+w: close window
@@ -60,7 +61,7 @@ Colorscheme: [Squared](https://www.xfce-look.org/p/2206255)
 - alt-rightclick: resize window
 - alt+keypad numbers: tile window to screen zones
 ---
-## package manager
+## Package Manager
 Query the remote packages list with:
 ```bat
 xbps-query -Rs name
