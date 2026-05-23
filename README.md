@@ -79,17 +79,19 @@ sudo xbps-install -S void-repo-nonfree
 
 ---
 ### Packages: utility
-- keepassxc
-- xfce4-screenshooter
-- libreoffice
-- engrampa
-- octoxbps
+- keepassxc : password manager
+- xfce4-screenshooter : for screenshots (with Stamp key)
+- libreoffice : documents, work
+- engrampa : archives explorer, integrated with thunar
+- octoxbps : graphical package manager for xbps
+- pdfarranger : pdf editing (merging, splitting, etc)
 
 ---
 ### Packages: games
 - dunelegacy
 - prismlauncher
 - openjdk25
+- steam
 
 ---
 ## Extra software
