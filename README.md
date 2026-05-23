@@ -33,6 +33,7 @@ Created three partitions
 |/boot/efi|vfat|1 GB|
 |swap|swap|8 GB|
 |/|ext4|450 GB|
+
 ---
 ## Style
 I removed every panel, only left a topbar for now.
@@ -60,6 +61,7 @@ Gtk3/4 theme: [Squared](https://www.xfce-look.org/p/2206255)
 - alt+leftclick: move window
 - alt-rightclick: resize window
 - alt+keypad numbers: tile window to screen zones
+
 ---
 ## Package Manager
 Query the remote packages list with:
@@ -74,6 +76,7 @@ Add repo:
 ```bat
 sudo xbps-install -S void-repo-nonfree
 ```
+
 ---
 ### Packages: utility
 - keepassxc
@@ -81,16 +84,19 @@ sudo xbps-install -S void-repo-nonfree
 - libreoffice
 - engrampa
 - octoxbps
+
 ---
 ### Packages: games
 - dunelegacy
 - prismlauncher
 - openjdk25
+
 ---
 ## Extra software
 Installed with script provided on the main webpage
 - [VeraCrypt](https://veracrypt.io)
 - Discord
+
 ---
 ## Gaming and Nvidia graphics
 ```bat
@@ -100,6 +106,7 @@ sudo xbps-install -S void-repo-multilib{,-nonfree}
 sudo xbps-install -S libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit mesa-dri-32bit
 sudo xbps-install nvidia-libs-32bit
 ```
+
 ---
 ## Grub
 ```bat
@@ -115,6 +122,7 @@ Then applied with:
 ```bat
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
 ---
 ## Bluetooth
 Installed base packages with:
@@ -132,6 +140,7 @@ Then added a GUI manager:
 ```bat
 sudo xbps-install blueman
 ```
+
 ---
 ## Omen lights
 Installed [Omen-light](https://github.com/chiahsing/omen-light)
@@ -140,11 +149,8 @@ sudo xbps-install hidapi-devel
 git clone https://github.com/chiahsing/omen-light
 g++ -o omen_light omen_light.cc -lhidapi-libusb
 ```
-I created [lux.bash](scripts/lux.bash), added run permissions and made it autorun:
-```bat
-chmod +x lux.bash
-echo "/home/trogoz/scripts/lux.bash" >> /etc/rc.local
-```
+I created [lux.bash](scripts/lux.bash), added run permissions and made it autorun, adding it to /etc/rc.local
+
 ---
 ## key remaps
 Installed the X11 packages to interact with keybinds:
@@ -161,6 +167,7 @@ And edited the file to add the workspace switching functionality I needed. To do
 sudo xbps-install xdotool
 ```
 The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
+
 ---
 ## To do
 - Volume keystrokes
