@@ -1,10 +1,14 @@
 # Voidots
 My notes on void linux installation and personalisation
 
-## Table of contents
-- [Installation](#-Installation)
-- [Style](#-Style)
+---
 
+## Table of contents
+- [Installation](#-installation)
+- [Style](#-style)
+
+
+---
 
 ## Installation
 Chosen XFCE version with GlibC for maximum compatibility
@@ -19,7 +23,7 @@ Created three partitions
 |/boot/efi|vfat|1 GB|
 |swap|swap|8 GB|
 |/|ext4|450 GB|
-
+---
 ## Style
 I removed every panel, only left a topbar for now.
 Created the Cruxified theme, based on Cruxish default theme
@@ -34,7 +38,7 @@ inactive_border_color=#FF0000
 Since the border was too thin, I also added 4 more lines to the xpm files starting with "bottom", adding 4 to the number of columns (second in the numbers vector of each file)
 
 Colorscheme: [Squared](https://www.xfce-look.org/p/2206255)
-
+---
 ## Keys
 - super+w: close window
 - super+t: terminal
@@ -45,7 +49,7 @@ Colorscheme: [Squared](https://www.xfce-look.org/p/2206255)
 - alt+leftclick: move window
 - alt-rightclick: resize window
 - alt+keypad numbers: tile window to screen zones
-
+---
 ## package manager
 Query the remote packages list with:
 ```bat
@@ -59,24 +63,24 @@ Add repo:
 ```bat
 sudo xbps-install -S void-repo-nonfree
 ```
-
+---
 ## Packages: utility
 - keepassxc
 - xfce4-screenshooter
 - libreoffice
 - engrampa
 - octoxbps
-
+---
 ## Packages: games
 - dunelegacy
 - prismlauncher
 - openjdk25
-
+---
 ## Extra software
 Installed with script provided on the main webpage
 - [VeraCrypt](https://veracrypt.io)
 - Discord
-
+---
 ## Gaming and Nvidia graphics
 ```bat
 sudo xbps-install -S nvidia nvidia-libs
@@ -85,7 +89,7 @@ sudo xbps-install -S void-repo-multilib{,-nonfree}
 sudo xbps-install -S libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit mesa-dri-32bit
 sudo xbps-install nvidia-libs-32bit
 ```
-
+---
 ## Grub
 ```bat
 sudo mousepad /etc/default/grub
@@ -100,7 +104,7 @@ Then applied with:
 ```bat
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
+---
 ## Bluetooth
 Installed base packages with:
 ```bat
@@ -117,7 +121,7 @@ Then added a GUI manager:
 ```bat
 sudo xbps-install blueman
 ```
-
+---
 ## Omen lights
 Installed [Omen-light](https://github.com/chiahsing/omen-light)
 ```bat
@@ -130,7 +134,7 @@ I created [lux.bash](scripts/lux.bash), added run permissions and made it autoru
 chmod +x lux.bash
 echo "/home/trogoz/scripts/lux.bash" >> /etc/rc.local
 ```
-
+---
 ## key remaps
 Installed the X11 packages to interact with keybinds:
 ```bat
@@ -146,7 +150,7 @@ And edited the file to add the workspace switching functionality I needed. To do
 sudo xbps-install xdotool
 ```
 The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
-
+---
 ## To do
 - Volume keystrokes
 - overlay clock and overlay workspace name?
