@@ -11,6 +11,7 @@ My notes on void linux installation and personalisation
 ---
 
 ## Installation
+[![installation]]
 Chosen XFCE version with GlibC for maximum compatibility
 In live context, used the following commands to start installation
 ```bat
