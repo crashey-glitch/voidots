@@ -6,12 +6,21 @@ My notes on void linux installation and personalisation
 ## Table of contents
 - [Installation](#-installation)
 - [Style](#-style)
-
+- [Keys](#-keys)
+- [Package Manager](#-package-manager)
+  - [Packages Utility](#-packages-utility)
+  - [Packages Games](#-packages-games)
+- [Extra software](#-extra-software)
+- [Gaming and Nvidia](#-gaming-nvidia)
+- [Grub](#-grub)
+- [Bluetooth](#-bluetooth)
+- [Omen lights](#-omen-lights)
+- [Key remaps](#-key-remaps)
+- [To do](#-todo)
 
 ---
 
 ## Installation
-[![installation]]
 Chosen XFCE version with GlibC for maximum compatibility
 In live context, used the following commands to start installation
 ```bat
@@ -65,14 +74,14 @@ Add repo:
 sudo xbps-install -S void-repo-nonfree
 ```
 ---
-## Packages: utility
+### Packages: utility
 - keepassxc
 - xfce4-screenshooter
 - libreoffice
 - engrampa
 - octoxbps
 ---
-## Packages: games
+### Packages: games
 - dunelegacy
 - prismlauncher
 - openjdk25
