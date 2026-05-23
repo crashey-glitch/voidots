@@ -177,7 +177,7 @@ The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
 - [x] Volume keys
 - [X] Mouse buttons
 - [X] Save dotfiles
-- [ ] startup section (rc.local for superuser and ??? for user)
+- [ ] startup section (rc.local for prior to login (root) and ??? for user)
 - [ ] 3D printing
 - [ ] arduino nfc reader and URKA
 - [ ] rougue galaxy in heroic launcher
