@@ -13,6 +13,7 @@ My notes on void linux installation and personalisation
 - [Extra software](#extra-software)
 - [Gaming and Nvidia](#gaming-nvidia)
 - [Grub](#grub)
+- [Lightdm](#lightdm)
 - [Bluetooth](#bluetooth)
 - [Omen lights](#omen-lights)
 - [Key remaps](#key-remaps)
@@ -116,14 +117,31 @@ sudo mousepad /etc/default/grub
 ```
 Uncommented the lines:
 - GRUB_BACKGROUND=/usr/share/void-artwork/splash.png
-- GRUB_GFXMODE=800x600x32
+- GRUB_GFXMODE=1280x1024x32
 - GRUB_COLOR_NORMAL="light-blue/black"
 - GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+
+Modified lines:
+- GRUB_TIMEOUT=15
+- GRUB_CMDLINE_LINUX_DEFAULT="loglevel=4 video=1920x1080-32@60"
 
 Then applied with:
 ```bat
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+---
+## Lightdm
+The login manager is way too small for a 4K monitor. I edited the gtk graphics with:
+```bat
+sudo mousepad /etc/lightdm/lightdm-gtk-greeter.conf
+```
+
+Adding the line:
+```bat
+xft-dpi = 192
+```
+Now it is usable.
 
 ---
 ## Bluetooth
