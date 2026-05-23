@@ -187,6 +187,7 @@ And edited the file to add the workspace switching functionality I needed. To do
 sudo xbps-install xdotool
 ```
 The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
+
 To autostart the keybinds I added the xbindkeys command to my [.bashrc](.bashrc)
 
 ---
