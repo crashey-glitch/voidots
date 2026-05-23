@@ -4,15 +4,15 @@ My notes on void linux installation and personalisation
 ---
 
 ## Table of contents
-- [Installation](#-installation)
+- [Installation](#installation)
 - [Style](#-style)
-- [Keys](#-keys)
+- [Keys](#keys)
 - [Package Manager](#-package-manager)
   - [Packages Utility](#-packages-utility)
   - [Packages Games](#-packages-games)
 - [Extra software](#-extra-software)
 - [Gaming and Nvidia](#-gaming-nvidia)
-- [Grub](#-grub)
+- [Grub](#grub)
 - [Bluetooth](#-bluetooth)
 - [Omen lights](#-omen-lights)
 - [Key remaps](#-key-remaps)
