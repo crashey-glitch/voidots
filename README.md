@@ -86,6 +86,7 @@ sudo xbps-install -S void-repo-nonfree
 - engrampa : archives explorer, integrated with thunar
 - octoxbps : graphical package manager for xbps
 - pdfarranger : pdf editing (merging, splitting, etc)
+- SweetHome3D
 
 ---
 ### Packages: games
