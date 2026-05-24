@@ -4,6 +4,9 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias xi='sudo xbps-install'
+alias xq='xbps-query -Rs'
+alias peaclock="peaclock --config-dir ~/.peaclock"
 
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[48;2;81;207;102m\] \[\e[0m\]\[\e[48;2;255;255;255m\] \[\e[0m\]\[\e[48;2;255;0;0m\] \[\e[0m\]\$>'
