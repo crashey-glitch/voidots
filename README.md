@@ -55,7 +55,7 @@ Slightly modified to add custom window color for unselected windows. See line 15
 
 icons theme: [Ant-dark folders](https://store.kde.org/p/1640981/)
 
-Also solved a weird bug in Mousepad. In dark themes the line numbers are highlighted and not visible, like (here)[https://github.com/vinceliuice/Qogir-theme/issues/331]
+Also solved a weird bug in Mousepad. In dark themes the line numbers are highlighted and not visible, like [here](https://github.com/vinceliuice/Qogir-theme/issues/331)
 
 The bug is not present in some colorscheme highlights, located in /usr/share/gtksourceview-4/styles/
 I tried to manipulate the classic colorscheme by creating a new one, named "classy", in the appropriate folder:
