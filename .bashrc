@@ -6,6 +6,7 @@
 alias ls='ls --color=auto'
 alias xi='sudo xbps-install'
 alias xq='xbps-query -Rs'
+alias vi='vim'
 alias pck='xfce4-terminal --hide-borders --hide-scrollbar --geometry=34x17 -x peaclock'
 
 #PS1='[\u@\h \W]\$ '
