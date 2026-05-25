@@ -189,7 +189,7 @@ sudo xbps-install xdotool
 ```
 The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
 
-To autostart the keybinds I added the xbindkeys command to my [.bashrc](.bashrc)
+To autostart the keybinds I added the xbindkeys command to my [.config/autostart](.config/autostart)
 
 ---
 ## To do
