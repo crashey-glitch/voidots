@@ -57,8 +57,7 @@ locale ''
 timezone ''
 
 # set the date format string, an empty string clears the value
-#date '%a %d %b - %I:%M:%S %P'
-date ''
+date '%a %d %b - %I:%M:%S %P'
 
 # set the mode type
 # select one of:
@@ -110,7 +109,7 @@ set hour-24 on
 set seconds off
 
 # display the date
-set date on
+set date off
 
 # auto size the clock to fill the screen, overrides the current x y block size
 set auto-size on
