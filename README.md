@@ -87,6 +87,7 @@ sudo xbps-install -S void-repo-nonfree
 - octoxbps : graphical package manager for xbps
 - pdfarranger : pdf editing (merging, splitting, etc)
 - SweetHome3D
+- vim
 
 ---
 ### Packages: games
