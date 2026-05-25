@@ -51,6 +51,8 @@ Since the border was too thin, I also added 4 more lines to the xpm files starti
 
 Gtk3/4 theme: [Squared](https://www.xfce-look.org/p/2206255)
 
+icons theme: [Ant-dark folders](https://store.kde.org/p/1640981/)
+
 ---
 ## Keys
 - super+w: close window
