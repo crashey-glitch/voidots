@@ -51,7 +51,7 @@ Since the border was too thin, I also added 4 more lines to the xpm files starti
 
 Gtk3/4 theme: [Squared](https://www.xfce-look.org/p/2206255)
 
-Slightly modified to add custom window color for unselected windows. See line 157 of [gtk3.0 config file](.themes/ReSquared/gtk3.0.css)
+Slightly modified to add custom window color for unselected windows. See line 157 of [gtk3.0 config file](.themes/ReSquared/gtk3.0/gtk.css)
 
 icons theme: [Ant-dark folders](https://store.kde.org/p/1640981/)
 
