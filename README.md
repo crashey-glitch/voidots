@@ -96,9 +96,11 @@ Somehow, just with this file present the problem solved itself
 |alt+leftclick| move window|
 |alt-rightclick| resize window|
 |alt+numpad | tile window to screen zones|
+
 ---
 ## Software
 Section for software content
+
 ---
 ### Package Manager
 Xbps is a fast and compact package management system.
@@ -237,15 +239,12 @@ The login manager is way too small for a 4K monitor. I edited the gtk graphics w
 ```bat
 sudo mousepad /etc/lightdm/lightdm-gtk-greeter.conf
 ```
-
 Adding the line:
 ```bat
 xft-dpi = 192
 ```
-Now it is usable.
 
 ---
-
 ## To do
 - [X] overlay clock (dclock is cool, TUI clock? Peaclock!)
 - [ ] rougue galaxy in heroic launcher
