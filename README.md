@@ -7,19 +7,21 @@ My notes on void linux installation and configuration
 
 ## Table of contents
 - [History](#history)
-- [Installation](#installation)
-- [Style](#style)
-- [Keys](#keys)
-- [Package Manager](#package-manager)
+  - [Installation](#installation)
+  - [Style](#style)
+- [Software](#software)
+  - [Package Manager](#package-manager)
   - [Packages Utility](#packages-utility)
   - [Packages Games](#packages-games)
-- [Extra software](#extra-software)
-- [Gaming and Nvidia](#gaming-and-nvidia-graphics)
-- [Grub](#grub)
-- [Lightdm](#lightdm)
-- [Bluetooth](#bluetooth)
-- [Omen lights](#omen-lights)
-- [Key remaps](#key-remaps)
+  - [Extra software](#extra-software)
+  - [Gaming and Nvidia](#gaming-and-nvidia-graphics)
+- [Hardware and boot](#hardware)
+  - [Keys](#keys)
+  - [Bluetooth](#bluetooth)
+  - [Omen lights](#omen-lights)
+  - [Key remaps](#key-remaps)
+  - [Grub](#grub)
+  - [Lightdm](#lightdm)
 - [To do](#to-do)
 
 ---
@@ -31,7 +33,7 @@ For ten years work and life kept me away, but on March 30th I finally installed 
 [back](#table-of-contents)
 ---
 
-## Installation
+### Installation
 Chosen XFCE version with GlibC for maximum compatibility
 In live context, used the following commands to start installation
 ```bat
@@ -46,7 +48,7 @@ Created three partitions
 |/|ext4|450 GB|
 
 ---
-## Style
+### Style
 I removed every panel, only left a topbar for now.
 Created the Cruxified theme, based on Cruxish default theme
 ```bat
@@ -78,18 +80,11 @@ I selected the color for line-numbers as #1d2528 on line 45, see [classy.xml](.l
 Somehow, just with this file present the problem solved itself, with no 
 
 ---
-## Keys
-| combination | effect |
-|-------|-------|
-|super+w| close window|
-|super+t| terminal|
-|super+f| web browser|
-|super+g| thunar|
-|ctrl+alt+left/right| change workspace|
-|ctrl+alt+shift+left/right| move window to workspace|
-|alt+leftclick| move window|
-|alt-rightclick| resize window|
-|alt+numpad | tile window to screen zones|
+## Software
+
+Section for software content
+
+
 
 ---
 ## Package Manager
@@ -142,7 +137,19 @@ sudo xbps-install -S void-repo-multilib{,-nonfree}
 sudo xbps-install -S libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit mesa-dri-32bit
 sudo xbps-install nvidia-libs-32bit
 ```
-
+---
+## Keys
+| combination | effect |
+|-------|-------|
+|super+w| close window|
+|super+t| terminal|
+|super+f| web browser|
+|super+g| thunar|
+|ctrl+alt+left/right| change workspace|
+|ctrl+alt+shift+left/right| move window to workspace|
+|alt+leftclick| move window|
+|alt-rightclick| resize window|
+|alt+numpad | tile window to screen zones|
 ---
 ## Grub
 ```bat
