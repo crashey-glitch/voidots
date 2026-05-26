@@ -188,6 +188,31 @@ sudo xbps-install nvidia-libs-32bit
 [back](#table-of-contents)
 
 ---
+### Software compilation
+
+#### Updated skippy-xd
+Void linux repos contain only a legacy version of skippy-xd [this](https://github.com/antonio-malcolm/skippy-xd), maintained by Antonio Malcolm, with last commits from 10 years ago.
+I tested it but the daemon is not able to keep track of windows from other workspaces, and there are clearly no animations.
+A more active version is [here](https://github.com/felixfung/skippy-xd). To compile the software we need some compilation tools:
+```bat
+sudo xbps-install git meson ninja pkgconf
+```
+and some development libs according to the makefile:
+```bat
+sudo xbps-install libX11-devel libXft-devel libXinerama-devel libXcomposite-devel libXdamage-devel e libXext-devel
+```
+then we setup, compile and install:
+```bat
+meson setup build
+meson compile -C build
+sudo meson install -C build
+```
+To configure the 
+
+
+[back](#table-of-contents)
+
+---
 ## Hardware
 Section for hardware configuration, drivers and boot
 
