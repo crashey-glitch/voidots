@@ -27,7 +27,7 @@ Many years ago I was a passionate "distro hopper", I tried lots, including Fruga
 For ten years work and life kept me away, but on March 30 I finally installed linux again. My initial choice was Rocky Linux 10.1. Gnome 48 is mature, clean, polished, and visually impressive with the right extensions. Flatpaks were initially a charming solution: easy to use, distro agnostic and autosolving dependencies? It appeared too good to be true. Unluckily, soon my home partition was not enough and the flatpak software was isolated and slow... and so was systemd. And then the network printer that I managed to install disappeared: it was time to embrace minimalism, it was time to enter the void.
 
 
-[back](#table-of-contents)
+###[back](#table-of-contents)
 ---
 
 ## Installation
