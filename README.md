@@ -24,10 +24,9 @@ My notes on void linux installation and configuration
 ## History
 Many years ago I was a passionate "distro hopper", I tried lots, including Frugalware, Ubuntu, Fedora, Mepis, PCLinuxOS, Damn small, Knoppix, Kanotix, Crunchbang and Debian. In 2026 I re-discovered the last one I installed on an old laptop: it was a Debian 8 "Jessie", with files dating back to 2016. 
 
-For ten years work and life kept me away, but on March 30 I finally installed linux again. My initial choice was Rocky Linux 10.1. Gnome 48 is mature, clean, polished, and visually impressive with the right extensions. Flatpaks were initially a charming solution: easy to use, distro agnostic and autosolving dependencies? It appeared too good to be true. Unluckily, soon my home partition was not enough and the flatpak software was isolated and slow... and so was systemd. And then the network printer that I managed to install disappeared: it was time to embrace minimalism, it was time to enter the void.
+For ten years work and life kept me away, but on March 30th I finally installed linux again. My initial choice was Rocky Linux 10.1. Gnome 48 is mature, clean, polished, and visually impressive with the right extensions. Flatpaks were initially a charming solution: easy to use, distro agnostic and autosolving dependencies? It appeared too good to be true. Unluckily, soon my home partition was not enough and the flatpak software was isolated and slow... and so was systemd. And then the network printer that I managed to install disappeared: on May 16th it was time to embrace minimalism, it was time to enter the void.
 
-
-### [back](#table-of-contents)
+[back](#table-of-contents)
 ---
 
 ## Installation
