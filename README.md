@@ -57,6 +57,9 @@ Created three partitions
 
 ---
 ### Style
+Minimalism, at last!
+![screen](./cruxivoid.webp)
+
 I removed every panel, only left a topbar for now.
 Created the Cruxified theme, based on Cruxish default theme
 ```bat
