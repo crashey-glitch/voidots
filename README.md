@@ -223,20 +223,20 @@ To autostart the keybinds I added the xbindkeys command to my [autostart](.confi
 
 ---
 ## To do
-- [ ] overlay clock (dclock is cool, TUI clock?)
+- [X] overlay clock (dclock is cool, TUI clock? Peaclock!)
+- [ ] rougue galaxy in heroic launcher
 - [ ] printer
 - [ ] overlay workspace notifier (partially done)
 - [x] Volume keys
 - [X] Mouse buttons
 - [X] Save dotfiles
-- [ ] startup section (rc.local for prior to login (root) and .xinitrc for user)
-- [ ] 3D printing
+- [ ] startup section (rc.local for prior to login (root) and .config/autostart for user)
+- [ ] 3D printing and modeling
 - [ ] arduino nfc reader and URKA
-- [ ] rougue galaxy in heroic launcher
 - [ ] PS1 color for user vs root
 - [ ] backup system
-- [ ] add recovery in grub
-- [ ] save grub.conf
+- [X] add recovery in grub (it is there!)
+- [ ] save grub.conf in here
 - [ ] desktop environment? (tiling?)
 - [ ] AI
 - [ ] VR
