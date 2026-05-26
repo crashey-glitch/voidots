@@ -1,5 +1,6 @@
 # Voidots
 ![voidlinux](https://avatars.githubusercontent.com/u/37247796?s=200&v=4)
+
 My notes on void linux installation and configuration
 
 ---
