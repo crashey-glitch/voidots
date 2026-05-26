@@ -11,7 +11,7 @@ My notes on void linux installation and personalisation
   - [Packages Utility](#packages-utility)
   - [Packages Games](#packages-games)
 - [Extra software](#extra-software)
-- [Gaming and Nvidia](#gaming-nvidia)
+- [Gaming and Nvidia](#gaming-and-nvidia-graphics)
 - [Grub](#grub)
 - [Lightdm](#lightdm)
 - [Bluetooth](#bluetooth)
@@ -69,15 +69,17 @@ Somehow, just with this file present the problem solved itself, with no
 
 ---
 ## Keys
-- super+w: close window
-- super+t: terminal
-- super+f: web browser
-- super+g: thunar
-- ctrl+alt+left/right: change workspace
-- ctrl+alt+shift+left/right: move window to workspace
-- alt+leftclick: move window
-- alt-rightclick: resize window
-- alt+keypad numbers: tile window to screen zones
+| mountpoint | FS |
+|-------|-------|
+|super+w| close window|
+|super+t| terminal|
+|super+f| web browser|
+|super+g| thunar|
+|ctrl+alt+left/right| change workspace|
+|ctrl+alt+shift+left/right| move window to workspace|
+|alt+leftclick| move window|
+|alt-rightclick| resize window|
+|alt+numpad | tile window to screen zones|
 
 ---
 ## Package Manager
