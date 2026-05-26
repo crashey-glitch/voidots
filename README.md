@@ -17,6 +17,7 @@ My notes on void linux installation and configuration
   - [Packages Games](#packages-games)
   - [Extra software](#extra-software)
   - [Gaming and Nvidia](#gaming-and-nvidia-graphics)
+  - [Software compilation](#software-compilation)
 - [Hardware and boot](#hardware)
   - [Bluetooth](#bluetooth)
   - [Omen lights](#omen-lights)
@@ -207,7 +208,10 @@ meson setup build
 meson compile -C build
 sudo meson install -C build
 ```
-To configure the 
+To configure skippy, I generated my [skippy-xd.rc](.config/skippy-xd/skippy-xd.rc), specifying my background picture and enabling the expose for all desktops with the line showAllDesktops=true.
+
+To autostart the daemon for each session  skippy-xd daemon.desktop
+Binded alt+\ (the key above tab in italian keyboard) to expose mode, command: skippy-xd --expose
 
 
 [back](#table-of-contents)
