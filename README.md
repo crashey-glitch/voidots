@@ -148,6 +148,8 @@ alias xq='xbps-query -Rs'
 - vim
 - xdotool
 - peaclock
+- zip
+- unzip
 
 [back](#table-of-contents)
 
