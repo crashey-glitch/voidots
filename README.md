@@ -28,6 +28,7 @@ My notes on void linux installation and configuration
 ---
 ## Intro
 First section, including history, style and initial configuration
+
 ---
 ### History
 Many years ago I was a passionate "distro hopper", I tried lots, including Frugalware, Ubuntu, Fedora, Mepis, PCLinuxOS, Damn small, Knoppix, Kanotix, Crunchbang and Debian. In 2026 I re-discovered the last one I installed on an old laptop: it was a Debian 8 "Jessie", with files dating back to 2016. 
