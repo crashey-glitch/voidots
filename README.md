@@ -6,9 +6,11 @@ My notes on void linux installation and configuration
 ---
 
 ## Table of contents
-- [History](#history)
+- [Intro](#intro)
+  - [History](#history)
   - [Installation](#installation)
   - [Style](#style)
+  - [Keys](#keys)
 - [Software](#software)
   - [Package Manager](#package-manager)
   - [Packages Utility](#packages-utility)
@@ -16,7 +18,6 @@ My notes on void linux installation and configuration
   - [Extra software](#extra-software)
   - [Gaming and Nvidia](#gaming-and-nvidia-graphics)
 - [Hardware and boot](#hardware)
-  - [Keys](#keys)
   - [Bluetooth](#bluetooth)
   - [Omen lights](#omen-lights)
   - [Key remaps](#key-remaps)
@@ -25,7 +26,10 @@ My notes on void linux installation and configuration
 - [To do](#to-do)
 
 ---
-## History
+## Intro
+First section, including history, style and initial configuration
+---
+### History
 Many years ago I was a passionate "distro hopper", I tried lots, including Frugalware, Ubuntu, Fedora, Mepis, PCLinuxOS, Damn small, Knoppix, Kanotix, Crunchbang and Debian. In 2026 I re-discovered the last one I installed on an old laptop: it was a Debian 8 "Jessie", with files dating back to 2016. 
 
 For ten years work and life kept me away, but on March 30th I finally installed linux again. My initial choice was Rocky Linux 10.1. Gnome 48 is mature, clean, polished, and visually impressive with the right extensions. Flatpaks were initially a charming solution: easy to use, distro agnostic and autosolving dependencies? It appeared too good to be true. Unluckily, soon my home partition was not enough and the flatpak software was isolated and slow... and so was systemd. And then the network printer that I managed to install disappeared: on May 16th it was time to embrace minimalism, it was time to enter the void.
@@ -77,17 +81,28 @@ cp /usr/share/gtksourceview-4/styles/classic.xml .local/share/gtksourceview-4/st
 ```
 I selected the color for line-numbers as #1d2528 on line 45, see [classy.xml](.local/share/gtksourceview-4/styles/classy.xml).
 
-Somehow, just with this file present the problem solved itself, with no 
+Somehow, just with this file present the problem solved itself 
 
+---
+### Keys
+| combination | effect |
+|-------|-------|
+|super+w| close window|
+|super+t| terminal|
+|super+f| web browser|
+|super+g| thunar|
+|ctrl+alt+left/right| change workspace|
+|ctrl+alt+shift+left/right| move window to workspace|
+|alt+leftclick| move window|
+|alt-rightclick| resize window|
+|alt+numpad | tile window to screen zones|
 ---
 ## Software
-
 Section for software content
-
-
-
 ---
-## Package Manager
+### Package Manager
+Xbps is a fast and compact package management system.
+
 Query the remote packages list with:
 ```bat
 xbps-query -Rs name
@@ -96,11 +111,15 @@ Update system:
 ```bat
 sudo xbps-install -Syu
 ```
-Add repo:
+Add nonfree repo:
 ```bat
 sudo xbps-install -S void-repo-nonfree
 ```
-
+I also added a couple alias to my [.bashrc](.bashrc):
+```bat
+alias xi='sudo xbps-install'
+alias xq='xbps-query -Rs'
+```
 ---
 ### Packages: utility
 - keepassxc : password manager
@@ -122,36 +141,78 @@ sudo xbps-install -S void-repo-nonfree
 - steam
 
 ---
-## Extra software
-Installed with script provided on the main webpage
+### Extra software
+Software not present in repos, added with installers available on the respective website
 - [VeraCrypt](https://veracrypt.io)
-- Discord
-- Heroic launcher
+- [Discord](https://discord.com/)
+- [Heroic launcher](https://heroicgameslauncher.com/)
 
 ---
-## Gaming and Nvidia graphics
+### Gaming and Nvidia graphics
+Initially installerd nvidia and steam
 ```bat
 sudo xbps-install -S nvidia nvidia-libs
 sudo xbps-install steam
+```
+To actually use steam it is required to also install 32bit libraries from the repos
+```bat
 sudo xbps-install -S void-repo-multilib{,-nonfree}
 sudo xbps-install -S libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit mesa-dri-32bit
 sudo xbps-install nvidia-libs-32bit
 ```
 ---
-## Keys
-| combination | effect |
-|-------|-------|
-|super+w| close window|
-|super+t| terminal|
-|super+f| web browser|
-|super+g| thunar|
-|ctrl+alt+left/right| change workspace|
-|ctrl+alt+shift+left/right| move window to workspace|
-|alt+leftclick| move window|
-|alt-rightclick| resize window|
-|alt+numpad | tile window to screen zones|
+## Hardware
+Section for hardware configuration, drivers and boot
+
 ---
-## Grub
+### Bluetooth
+Installed base packages with:
+```bat
+sudo xbps-install libspa-bluetooth
+sudo xbps-install bluez
+```
+Registered the service and started it and added user to group with:
+```bat
+sudo ln -s /etc/sv/bluetoothd /var/service
+sudo sv up bluetoothd
+sudo usermod -aG bluetooth trogoz
+```
+Then added a GUI manager:
+```bat
+sudo xbps-install blueman
+```
+
+---
+### Omen lights
+Installed [Omen-light](https://github.com/chiahsing/omen-light)
+```bat
+sudo xbps-install hidapi-devel
+git clone https://github.com/chiahsing/omen-light
+g++ -o omen_light omen_light.cc -lhidapi-libusb
+```
+I created [lux.bash](scripts/lux.bash), added run permissions and made it autorun, adding it to /etc/rc.local
+
+---
+### Key remaps
+Installed the X11 packages to interact with keybinds:
+```bat
+sudo xbps-install xev xbindkeys 
+```
+With xev it is possible to retrieve the button names, for example my mouse buttons are 8 and 9.
+Then I generated the base config for xbindkeys
+```bat
+xbindkeys --defaults > ~/.xbindkeysrc
+```
+And edited the file to add the workspace switching functionality I needed. To do that the needed package is:
+```bat
+sudo xbps-install xdotool
+```
+The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
+
+To autostart the keybinds I added the xbindkeys command to my [autostart](.config/autostart/Keybindings.desktop)
+
+---
+### Grub
 ```bat
 sudo mousepad /etc/default/grub
 ```
@@ -171,7 +232,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ---
-## Lightdm
+### Lightdm
 The login manager is way too small for a 4K monitor. I edited the gtk graphics with:
 ```bat
 sudo mousepad /etc/lightdm/lightdm-gtk-greeter.conf
@@ -184,57 +245,11 @@ xft-dpi = 192
 Now it is usable.
 
 ---
-## Bluetooth
-Installed base packages with:
-```bat
-sudo xbps-install libspa-bluetooth
-sudo xbps-install bluez
-```
-Registered the service and started it and added user to group with:
-```bat
-sudo ln -s /etc/sv/bluetoothd /var/service
-sudo sv up bluetoothd
-sudo usermod -aG bluetooth trogoz
-```
-Then added a GUI manager:
-```bat
-sudo xbps-install blueman
-```
 
----
-## Omen lights
-Installed [Omen-light](https://github.com/chiahsing/omen-light)
-```bat
-sudo xbps-install hidapi-devel
-git clone https://github.com/chiahsing/omen-light
-g++ -o omen_light omen_light.cc -lhidapi-libusb
-```
-I created [lux.bash](scripts/lux.bash), added run permissions and made it autorun, adding it to /etc/rc.local
-
----
-## Key remaps
-Installed the X11 packages to interact with keybinds:
-```bat
-sudo xbps-install xev xbindkeys 
-```
-With xev it is possible to retrieve the button names, for example my mouse buttons are 8 and 9.
-Then I generated the base config for xbindkeys
-```bat
-xbindkeys --defaults > ~/.xbindkeysrc
-```
-And edited the file to add the workspace switching functionality I needed. To do that the needed package is:
-```bat
-sudo xbps-install xdotool
-```
-The resulting config file is my [.xbindkeysrc](.xbindkeysrc)
-
-To autostart the keybinds I added the xbindkeys command to my [autostart](.config/autostart/Keybindings.desktop)
-
----
 ## To do
 - [X] overlay clock (dclock is cool, TUI clock? Peaclock!)
 - [ ] rougue galaxy in heroic launcher
-- [ ] printer
+- [ ] network printer (brother)
 - [ ] overlay workspace notifier (partially done)
 - [x] Volume keys
 - [X] Mouse buttons
@@ -246,7 +261,7 @@ To autostart the keybinds I added the xbindkeys command to my [autostart](.confi
 - [ ] backup system
 - [X] add recovery in grub (it is there!)
 - [ ] save grub.conf in here
-- [ ] desktop environment? (tiling?)
+- [ ] desktop environment? (tiling?) Weyland?
 - [ ] AI
 - [ ] VR
 
