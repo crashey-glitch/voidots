@@ -258,7 +258,7 @@ Installed the X11 packages to interact with keybinds:
 ```bat
 sudo xbps-install xev xbindkeys 
 ```
-With xev it is possible to retrieve the button names, for example my mouse buttons are 8 and 9.
+With xbindkeys --key or with xev it is possible to retrieve the button names, for example my mouse buttons are 8 and 9.
 Then I generated the base config for xbindkeys
 ```bat
 xbindkeys --defaults > ~/.xbindkeysrc
@@ -313,7 +313,7 @@ xft-dpi = 192
 - [X] overlay clock (dclock is cool, TUI clock? Peaclock!)
 - [ ] rougue galaxy in heroic launcher
 - [ ] network printer (brother)
-- [ ] overlay workspace notifier (partially done)
+- [x] overlay workspace notifier (nope, use sc)
 - [x] Volume keys
 - [X] Mouse buttons
 - [X] Save dotfiles
