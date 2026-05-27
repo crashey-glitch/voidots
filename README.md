@@ -313,11 +313,11 @@ xft-dpi = 192
 - [X] overlay clock (dclock is cool, TUI clock? Peaclock!)
 - [ ] rougue galaxy in heroic launcher
 - [ ] network printer (brother)
-- [x] overlay workspace notifier (nope, use sc)
+- [x] overlay workspace notifier (nope, use skippy-xd)
 - [x] Volume keys
 - [X] Mouse buttons
 - [X] Save dotfiles
-- [ ] startup section (rc.local for prior to login (root) and .config/autostart for user)
+- [X] startup section (rc.local for prior to login (root) and .config/autostart for user)
 - [ ] 3D printing and modeling
 - [ ] arduino nfc reader and URKA
 - [ ] PS1 color for user vs root
