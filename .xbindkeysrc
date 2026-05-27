@@ -2,6 +2,44 @@
 ###########################
 # xbindkeys configuration #
 ###########################
+
+
+
+
+#mousekeys to change workspace
+"xdotool set_desktop --relative -- -1"
+ b:8
+
+"xdotool set_desktop --relative +1"
+ b:9
+
+#volume keys
+"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+ XF86AudioLowerVolume
+
+"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+ XF86AudioRaiseVolume
+
+"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+ XF86AudioMute
+
+#muto microfono... sulla mia tastiera nemmeno c'è
+"wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+ XF86AudioMicMute
+
+
+#skippy-xd commands with super key, for workspaces
+"skippy-xd --paging"
+ Mod4 + backslash
+
+"skippy-xd --expose --desktop -1 --toggle"
+ Mod1 + backslash
+
+#my fav clock
+"/home/trogoz/scripts/peaclock.bash"
+ Control+ugrave
+
+###########################
 #
 # Version: 1.8.7
 #
@@ -49,27 +87,6 @@
 # specify a mouse button
 #"xterm"
 #  control + b:2
-
-#proviamo col mouse
-"xdotool set_desktop --relative -- -1"
- b:8
-
-"xdotool set_desktop --relative +1"
- b:9
-
-#e il volume
-"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
- XF86AudioLowerVolume
-
-"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
- XF86AudioRaiseVolume
-
-"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
- XF86AudioMute
-
-#muto microfono
-"wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
- XF86AudioMicMute
 
 #"xterm -geom 50x20+20+20"
 #   Shift+Mod2+alt + s
