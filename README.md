@@ -20,7 +20,7 @@ My notes on void linux installation and configuration
   - [Software compilation](#software-compilation)
 - [Gaming](#gaming)
   - [Heroic launcher](#heroic-launcher)
-  - [Itch.io](#itch.io)
+  - [Itch.io](#itch-io)
 - [Hardware and boot](#hardware)
   - [Bluetooth](#bluetooth)
   - [Omen lights](#omen-lights)
