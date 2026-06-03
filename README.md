@@ -11,6 +11,7 @@ My notes on void linux installation and configuration
   - [Installation](#installation)
   - [Style](#style)
   - [Keys](#keys)
+  - [Logout sound](#logout-sound)
 - [Software](#software)
   - [Package Manager](#package-manager)
   - [Packages Utility](#packages-utility)
@@ -20,7 +21,7 @@ My notes on void linux installation and configuration
   - [Software compilation](#software-compilation)
 - [Gaming](#gaming)
   - [Heroic launcher](#heroic-launcher)
-  - [Itch.io](#itch-io)
+  - [Itch.io](#itchio)
 - [Hardware and boot](#hardware)
   - [Bluetooth](#bluetooth)
   - [Omen lights](#omen-lights)
@@ -109,6 +110,15 @@ Somehow, just with this file present the problem solved itself
 |alt+leftclick| move window|
 |alt-rightclick| resize window|
 |alt+numpad | tile window to screen zones|
+
+[back](#table-of-contents)
+
+---
+### Logout sound
+For some reason, the system decided to run a weird bell sound each time I tried to log out. The only workaround I found was to rename the obnoxious sound
+```bat
+sudo mv /usr/share/sounds/bell.wav /usr/share/sounds/bell2.wav
+```
 
 [back](#table-of-contents)
 
