@@ -16,8 +16,11 @@ My notes on void linux installation and configuration
   - [Packages Utility](#packages-utility)
   - [Packages Games](#packages-games)
   - [Extra software](#extra-software)
-  - [Gaming and Nvidia](#gaming-and-nvidia-graphics)
+  - [Nvidia](#gaming-and-nvidia-graphics)
   - [Software compilation](#software-compilation)
+- [Gaming](#gaming)
+  - [Heroic launcher](#heroic-launcher)
+  - [Itch.io](#itch.io)
 - [Hardware and boot](#hardware)
   - [Bluetooth](#bluetooth)
   - [Omen lights](#omen-lights)
@@ -145,7 +148,6 @@ alias xq='xbps-query -Rs'
 - engrampa : archives explorer, integrated with thunar
 - octoxbps : graphical package manager for xbps
 - pdfarranger : pdf editing (merging, splitting, etc)
-- SweetHome3D
 - vim
 - xdotool
 - peaclock
@@ -169,11 +171,12 @@ Software not present in repos, added with installers available on the respective
 - [VeraCrypt](https://veracrypt.io)
 - [Discord](https://discord.com/)
 - [Heroic launcher](https://heroicgameslauncher.com/)
+- SweetHome3D (repo package did not run, the script with -Java3D-1_5_2 works)
 
 [back](#table-of-contents)
 
 ---
-### Gaming and Nvidia graphics
+### Nvidia
 Initially installerd nvidia and steam
 ```bat
 sudo xbps-install -S nvidia nvidia-libs
@@ -213,6 +216,26 @@ To configure skippy, I generated my [skippy-xd.rc](.config/skippy-xd/skippy-xd.r
 To autostart the daemon for each session  skippy-xd daemon.desktop
 Binded alt+\ (the key above tab in italian keyboard) to expose mode, command: skippy-xd --expose
 
+
+[back](#table-of-contents)
+
+---
+## Gaming
+Section for gaming installation and configuration
+
+---
+### Heroic launcher
+Installed from official website
+
+[back](#table-of-contents)
+
+---
+### Itch.io
+I tried to run Delver, which includes a linux version. The game requires java, already installed as openjdk25 package, and libGDX, a gaming framework, included in the jar file. Running the launcher script created some issues, initially with steamapp_id file (included in the jar. Is it actually needed? Try to remove it) and then with libGDX crashing on launch. After some investigations, the reason appeared to be the implicit use of the command xrandr, not present by default on void linux. Installed it with:
+```bat
+sudo xbps-install xrandr
+```
+and finally the game runs with no issues.
 
 [back](#table-of-contents)
 
