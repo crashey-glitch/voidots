@@ -125,8 +125,9 @@ In order to remove the last panel and gain the maximum possible screen real esta
 For the clock I installed [peaclock](https://github.com/octobanana/peaclock), configured as a binary clock in [its config file](.peaclock/config).
 Binded ctrl+ù (adjacent to enter in italian keyboard) to a [toggling bash script](scripts/toggleclock.bash) that launches a terminal with no borders in my [xbindkeys](.xbindkeysrc).
 
-
 For the workspace navigation I am using [an updated version of skippy-xd](https://github.com/felixfung/skippy-xd). To install it, check the [dedicated section](#software-compilation)
+
+Finally I can remove the last panel in XFCE. This is not an easy config, the best way to do it was to run xfce4-panel -q in my autostart, as done [here](.config/autostart/remove panel.desktop)
 
 [back](#table-of-contents)
 
