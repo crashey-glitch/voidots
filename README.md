@@ -127,7 +127,8 @@ Binded ctrl+ù (adjacent to enter in italian keyboard) to a [toggling bash scrip
 
 For the workspace navigation I am using [an updated version of skippy-xd](https://github.com/felixfung/skippy-xd). To install it, check the [dedicated section](#software-compilation)
 
-Finally I can remove the last panel in XFCE. This is not an easy config, the best way to do it was to run xfce4-panel -q in my autostart, as done [here]('.config/autostart/remove panel.desktop')
+Finally I can remove the last panel in XFCE. This is not an easy config, the best way to do it was to run xfce4-panel -q in my autostart, as done [here](.config/autostart/remove%20panel.desktop)
+
 
 [back](#table-of-contents)
 
@@ -241,7 +242,7 @@ sudo meson install -C build
 ```
 To configure skippy, I generated my [skippy-xd.rc](.config/skippy-xd/skippy-xd.rc), specifying my background picture and enabling the expose for all desktops with the line showAllDesktops=true.
 
-I created the autostart for the daemon for each session: [skippy-xd autostart](.config/autostart/skippy-xd daemon.desktop)
+I created the autostart for the daemon for each session: [skippy-xd autostart](.config/autostart/skippy-xd%20daemon.desktop)
 
 To use it, I binded alt+\ (the key above tab in italian keyboard) to expose mode and super+\ to paging mode in my [xbindkeysrc](.xbindkeysrc)
 
