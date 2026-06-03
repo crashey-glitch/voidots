@@ -9,8 +9,10 @@ My notes on void linux installation and configuration
 - [Intro](#intro)
   - [History](#history)
   - [Installation](#installation)
-  - [Style](#style)
   - [Keys](#keys)
+- [Style](#style)
+  - [Theme](#theme)
+  - [Panel](#panel)
   - [Logout sound](#logout-sound)
 - [Software](#software)
   - [Package Manager](#package-manager)
@@ -61,11 +63,30 @@ Created three partitions
 [back](#table-of-contents)
 
 ---
-### Style
+### Keys
+| combination | effect |
+|-------|-------|
+|super+w| close window|
+|super+t| terminal|
+|super+f| web browser|
+|super+g| thunar|
+|ctrl+alt+left/right| change workspace|
+|ctrl+alt+shift+left/right| move window to workspace|
+|alt+leftclick| move window|
+|alt-rightclick| resize window|
+|alt+numpad | tile window to screen zones|
+
+[back](#table-of-contents)
+
+---
+## Style
+
+---
+### Theme
 Minimalism, at last!
 ![screen](./cruxivoid.webp)
 
-I removed every panel, only left a topbar for now.
+I removed every panel I could, only left a topbar for now.
 Created the Cruxified theme, based on Cruxish default theme
 ```bat
 cp -r /usr/share/themes/Cruxish ~/.themes/Cruxified
@@ -98,18 +119,14 @@ Somehow, just with this file present the problem solved itself
 [back](#table-of-contents)
 
 ---
-### Keys
-| combination | effect |
-|-------|-------|
-|super+w| close window|
-|super+t| terminal|
-|super+f| web browser|
-|super+g| thunar|
-|ctrl+alt+left/right| change workspace|
-|ctrl+alt+shift+left/right| move window to workspace|
-|alt+leftclick| move window|
-|alt-rightclick| resize window|
-|alt+numpad | tile window to screen zones|
+### Panel
+In order to remove the last panel and gain the maximum possible screen real estate, two functionalities needed to be reproduced in its absence: the clock and the workspace view.
+
+For the clock I installed [peaclock](https://github.com/octobanana/peaclock), configured as a binary clock in [its config file](.peaclock/config).
+Binded ctrl+ù (adjacent to enter in italian keyboard) to a [toggling bash script](scripts/toggleclock.bash) that launches a terminal with no borders in my [xbindkeys](.xbindkeysrc).
+
+
+For the workspace navigation I am using [an updated version of skippy-xd](https://github.com/felixfung/skippy-xd). To install it, check the [dedicated section](#software-compilation)
 
 [back](#table-of-contents)
 
