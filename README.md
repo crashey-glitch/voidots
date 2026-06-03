@@ -127,7 +127,7 @@ Binded ctrl+ù (adjacent to enter in italian keyboard) to a [toggling bash scrip
 
 For the workspace navigation I am using [an updated version of skippy-xd](https://github.com/felixfung/skippy-xd). To install it, check the [dedicated section](#software-compilation)
 
-Finally I can remove the last panel in XFCE. This is not an easy config, the best way to do it was to run xfce4-panel -q in my autostart, as done [here](.config/autostart/remove panel.desktop)
+Finally I can remove the last panel in XFCE. This is not an easy config, the best way to do it was to run xfce4-panel -q in my autostart, as done [here]('.config/autostart/remove panel.desktop')
 
 [back](#table-of-contents)
 
