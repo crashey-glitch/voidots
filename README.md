@@ -30,6 +30,8 @@ My notes on void linux installation and configuration
   - [Key remaps](#key-remaps)
   - [Grub](#grub)
   - [Lightdm](#lightdm)
+  - [Brother printer](#brother-printer)
+  - [3D printer](#3d-printer)
 - [To do](#to-do)
 
 ---
@@ -362,22 +364,53 @@ xft-dpi = 192
 [back](#table-of-contents)
 
 ---
+### Brother printer
+Installed the basic cups packages:
+```bat
+sudo xbps-install cups cups-filters cups-pdf
+```
+
+Enabled and launched cups service:
+```bat
+sudo ln -s /etc/sv/cupsd /var/service
+sudo sv up cupsd
+```
+
+Also added my user to print group:
+```bat
+sudo usermod -aG lpadmin trogoz
+```
+
+To enable the printer, I navigated to [http://localhost:631](http://localhost:631), logged in and added the printer with the generic ipp everywhere driver. The uri for the protocol is in the form of ipp://192.168.X.X/ipp/print
+
+[back](#table-of-contents)
+
+---
+### 3D printer
+
+No Fusion360 is available for linux, i will have to leard freecad or something. 
+
+Bambulab studio is present on flathub instead. I had to install flatpak just for this software. 
+
+[back](#table-of-contents)
+
+---
 ## To do
-- [X] overlay clock (dclock is cool, TUI clock? Peaclock!)
+- [ ] PS1 color for user vs root
 - [ ] rougue galaxy in heroic launcher
-- [ ] network printer (brother)
+- [ ] arduino nfc reader and URKA
+- [ ] 3D printing and modeling
+- [ ] backup system
+- [ ] save grub.conf in here
+- [ ] desktop environment? (tiling? qtile?) Weyland?
+- [x] overlay clock (dclock is cool, TUI clock? Peaclock!)
+- [x] network printer (brother)
 - [x] overlay workspace notifier (nope, use skippy-xd)
 - [x] Volume keys
-- [X] Mouse buttons
-- [X] Save dotfiles
-- [X] startup section (rc.local for prior to login (root) and .config/autostart for user)
-- [ ] 3D printing and modeling
-- [ ] arduino nfc reader and URKA
-- [ ] PS1 color for user vs root
-- [ ] backup system
-- [X] add recovery in grub (it is there!)
-- [ ] save grub.conf in here
-- [ ] desktop environment? (tiling?) Weyland?
+- [x] Mouse buttons
+- [x] Save dotfiles
+- [x] startup section (rc.local for prior to login (root) and .config/autostart for user)
+- [x] add recovery in grub (it is there!)
 - [ ] AI
 - [ ] VR
 
